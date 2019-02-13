@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 /*!
  * Bootstrap v4.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -9119,88 +9118,3 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
-=======
-/* Body */
-
-body {
-        font: 1rem/1.5 var(--font-family-sans-serif);
-        background-color: #1d1d1d;
-     }
-a {
-        color: white;
-    }
-
-
-
-
-
-
-/* Navbar Brand */
-
-.navbar{
-  background-image: none;
-  border-radius: 0px;
-  border: 0;
-  box-shadow: none;
-  padding: 10px;
-  position: absolute; /* Make the menu out of the document flow so it can placed anywhere without disturbing other widgets */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10; /* If you delete this line, your menu link won't be clicked because it is behind the background. Applying this code bring the menu in front of the background */
-}
-
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    color: aliceblue;
-}
-.navbar-light .navbar-nav .nav-link {
-    color: aliceblue;
-}
-
-.menu-title {
-    margin-top: 50px;
-    font-size: 2rem;
-    color: aliceblue;
-}
-
-.hr-title {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 1;
-    border-top: 1px solid rgb(243, 240, 240);
-}
-.see-more {
-    margin-top: 50px;
-}
-/* dekstop version */
-
-@media (min-width: 992px) { 
-    .navbar {
-        padding: 3rem 1rem;
-        font-family: Raleway;
-    }
-
-    .navbar-brand 
-    img{
-        width: 200px;
-    }
-    
-    .bg-light {
-        background-color: rgba(0, 0, 0, 0.479)!important;
-    }    
-
-    .col-md-6 {
-        width: 50%;
-    }
-}
-
-
-@media (min-width: 500px) {  
-    .navbar-brand 
-    img{
-        
-    }
-      
-  }
-
->>>>>>> e46568619d316eba44b80a2ae9e07b1791fc8271
