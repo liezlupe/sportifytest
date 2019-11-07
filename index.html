@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="css/ionicons.min.css">   
 
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+		<link rel="stylesheet" href="css/jquery.timepicker.css">
+		
 
     
     <link rel="stylesheet" href="css/flaticon.css">
@@ -32,6 +33,9 @@
 		<link rel="stylesheet" href="css/search.css">
 
 		<link rel="stylesheet" href="css/simple-overlay.css">
+
+		<!-- Favicon  -->
+    <link rel="icon" href="images/sportify_logo_02.png">
 	</head>
 	<style> 
 			body{
@@ -67,34 +71,43 @@
       font-family: sans-serif;
       line-height: 130%;
 		} */
-		
-		.see-more {
-        padding-top:115px;
-        width:175px;
-      }
 
-    .demo-inline-content {
-      padding: 30px;
-		}
-		.menu-title {
-        font-family: 'Exo', sans-serif;
-        font-style: italic;
-        font-weight:bold;
-        font-size:2em;
-        color: #fff;
-				padding-top:60px;
-				text-transform: uppercase;
-		}
-		.hr-title {
-              margin-top: 1rem;
-              margin-bottom: 1rem;
-              border: 1;
-							border-top: 1px solid rgb(243, 240, 240);
-		}
+		#preloader {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	z-index: 11000;
+	position: fixed;
+	display: block
+}
+
+.preloader {
+	position: absolute;
+	margin: 0 auto;
+	left: 1%;
+	right: 1%;
+	top: 25%;
+	width: 320px;
+	background: center center no-repeat none;
+	background-size: auto auto;
+	background-size: 95px 95px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.demo-inline-content {
+  padding: 30px;
+	}		
+}
 			
-		</style>
-
-
+</style>
 
 <!-- JS -->
 
@@ -114,24 +127,24 @@
 									<a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
 								</li>
 								<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<a class="nav-link dropdown-toggle" href="#section-1" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											CATEGORY
 										</a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item" href="#">Start Player</a>
+											<a class="dropdown-item" href="">Start Player</a>
 											<a class="dropdown-item" href="#">Soccer Club</a>
 											<div class="dropdown-divider"></div>
 											<a class="dropdown-item" href="#">Something else here</a>
 										</div>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">TOP VIDEOS</a>
+									<a class="nav-link" href="#section-2">TOP VIDEOS</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">NEW VIDEOS</a>
+									<a class="nav-link" href="#section-3">NEW VIDEOS</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">CONTACT US</a>
+									<a class="nav-link" href="#section-4">CONTACT US</a>
 								</li>
 							 
 						</ul>
@@ -187,7 +200,8 @@
 </section>
 
 <!-- satu -->
-<section class="ftco-section">
+
+<section class="ftco-section" id="section-1">
 		<div class="container">
 						<div class="row">
 								<div class="col-xs-12 col-sm-3">
@@ -247,9 +261,10 @@
 
 						</div>
 		</div>
+	</section>
 
 		<!-- Dua -->
-		<section>
+		<section id="section-2">
 			<div class="container">
 				<div class="row">
 						<div class="col-md-12">
@@ -323,7 +338,7 @@
 
 						</div>
 
-		<section>
+		<section id ="section-3">
 				<div class="container">
 					<div class="row">
 							<div class="col-md-12">
@@ -406,7 +421,7 @@
 
 
 
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <footer class="ftco-footer ftco-bg-dark ftco-section" id="section-4">
       <div class="container">
         <div class="row mb-5">
          
@@ -427,6 +442,9 @@
   <!-- loader -->
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 	
+	<!-- <div id="preloader">
+		<img class="preloader" src="images/loading-img.gif" alt="">
+ </div> -->
 
 	
 	<script src="js/jquery.min.js"></script>
@@ -439,12 +457,19 @@
     "insertBy": "embed",
     "attribute": "data-youtube"
 	});
+
+	$(window).load(function() {
+        $("#preloader").on(500).fadeOut();
+        $(".preloader").on(600).fadeOut("slow");
+    });
 	</script>
+
 
 
 	<script scr="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/scroll.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.easing.1.3.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
@@ -453,7 +478,7 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/all.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
